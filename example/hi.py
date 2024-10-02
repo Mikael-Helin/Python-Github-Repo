@@ -1,3 +1,3 @@
-import hello_world_package
+from hello_world_package import hello
 
-hello_world_package.say_hello()
+hello.say_hello()
