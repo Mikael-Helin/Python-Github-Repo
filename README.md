@@ -28,10 +28,10 @@ from setuptools import setup
 setup(
     name='hello_world_package',
     version='0.0.1',
-    py_modules=['hello'],
+    py_modules=['hello_world_package.hello'],  # Manually specify the module path
     entry_points={
         'console_scripts': [
-            'say_hello=hello:say_hello',
+            'say_hello=hello_world_package.hello:say_hello',
         ],
     }
 )
@@ -71,10 +71,12 @@ pip list
 then create a program `hi.py`
 
 ```python
-from hello_world_package import say_hello
+from hello_world_package import hello
 
-say_hello()
+hello.say_hello()
 ```
+
+and run `python3 hi.py`.
 
 ### Step 5: Run the Program
 Once the package is installed, you can run it from the command line using:
