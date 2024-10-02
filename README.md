@@ -1,6 +1,6 @@
-# Python-Github-Repo
+# Python Github Repo
 
-Steps on how to create a pip repo on GitHub.
+Steps on how to create a pip repo on GitHub. You can pip install directly from a GitHub repo.
 
 ### Step 1: Create the Python Program
 
@@ -18,6 +18,8 @@ def say_hello():
     print("Hello, World!")
 ```
 
+This is the program we want to import.
+
 ### Step 2: Create `setup.py`
 
 Create a `setup.py` file in the project root directory. This file is required for packaging your Python project. Here’s a minimal example of what it should look like:
@@ -28,7 +30,7 @@ from setuptools import setup
 setup(
     name='hello_world_package',
     version='0.0.1',
-    py_modules=['hello_world_package.hello'],  # Manually specify the module path
+    py_modules=['hello_world_package.hello'],  # Manually specify the module path i.e. hello_world_package/hello.py
     entry_points={
         'console_scripts': [
             'say_hello=hello_world_package.hello:say_hello',
@@ -71,20 +73,12 @@ pip list
 then create a program `hi.py`
 
 ```python
+# packages are directories containing modules
+# modules are the .py files containing your code
+# from package_name import module_name
 from hello_world_package import hello
 
 hello.say_hello()
 ```
 
 and run `python3 hi.py`.
-
-### Step 5: Run the Program
-Once the package is installed, you can run it from the command line using:
-
-```bash
-say_hello
-```
-
-This should print "Hello, World!" to the console.
-
-Let me know if you'd like help with any part of this!
