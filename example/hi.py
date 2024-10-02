@@ -1,0 +1,3 @@
+import hello_world_package
+
+hello_world_package.say_hello()
