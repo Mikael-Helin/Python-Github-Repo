@@ -2,11 +2,11 @@ from setuptools import setup
 
 setup(
     name='hello_world_package',
-    version='0.0.1',
-    py_modules=['hello'],
+    version='0.1',
+    py_modules=['my_hello_world_package'],  # match the module file name
     entry_points={
         'console_scripts': [
-            'say_hello=hello:say_hello',
+            'say_hello=hello_world_package:say_hello',
         ],
     }
 )

@@ -20,7 +20,7 @@ def say_hello():
 
 ### Step 2: Create `setup.py`
 
-Create a `setup.py` file in the same directory. This file is required for packaging your Python project. Here’s a minimal example of what it should look like:
+Create a `setup.py` file in the project root directory. This file is required for packaging your Python project. Here’s a minimal example of what it should look like:
 
 ```python
 from setuptools import setup
@@ -63,13 +63,17 @@ mkdir example
 cd example
 python3 -m venv venv
 source venv/bin/activate
+python -m pip install -U pip setuptools 
 python3 -m pip install git+https://github.com/Mikael-Helin/Python-Github-Repo.git
+pip list
 ```
 
 then create a program `hi.py`
 
 ```python
-import 
+from hello_world_package import say_hello
+
+say_hello()
 ```
 
 ### Step 5: Run the Program
