@@ -27,7 +27,7 @@ from setuptools import setup
 
 setup(
     name='hello_world_package',
-    version='0.1',
+    version='0.0.1',
     py_modules=['hello'],
     entry_points={
         'console_scripts': [
@@ -63,7 +63,7 @@ mkdir example
 cd example
 python3 -m venv venv
 source venv/bin/activate
-python3 -m pip install git+https://github.com/mikaelhelin/hello_world_package.git
+python3 -m pip install git+https://github.com/Mikael-Helin/Python-Github-Repo.git
 ```
 
 then create a program `hi.py`
