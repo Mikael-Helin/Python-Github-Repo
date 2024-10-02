@@ -3,6 +3,7 @@
 Steps on how to create a pip repo on GitHub.
 
 ### Step 1: Create the Python Program
+
 First, create a directory for your project and navigate to it:
 
 ```bash
@@ -39,8 +40,9 @@ setup(
 This `setup.py` file tells Python how to package the module, and the `entry_points` section makes your `say_hello` function accessible from the command line.
 
 ### Step 3: Create a GitHub Repository
+
 1. Go to [GitHub](https://github.com) and create a new repository.
-2. Name it something like `hello_world_package`.
+2. Name it something like `hello_world_package` (I named it `Python-Github-Repo`).
 3. Follow the instructions on the page to push your code to the repository:
 
 ```bash
@@ -48,17 +50,26 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/yourusername/hello_world_package.git
+git remote add origin https://github.com/Mikael-Helin/Python-Github-Repo.git
 git push -u origin main
 ```
 
 ### Step 4: Install from GitHub using `pip`
+
 To install the package from GitHub, you can use the following command:
 
 ```bash
+mkdir example
+cd example
 python3 -m venv venv
-source /bin/activate
-python3 -m pip install git+https://github.com/yourusername/hello_world_package.git
+source venv/bin/activate
+python3 -m pip install git+https://github.com/mikaelhelin/hello_world_package.git
+```
+
+then create a program `hi.py`
+
+```python
+import 
 ```
 
 ### Step 5: Run the Program
